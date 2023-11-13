@@ -1,17 +1,12 @@
 package DecouverteMultithreading.strassenWithForkJoin;
 
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.RecursiveTask;
 
 public class Strassen extends RecursiveTask<int[][]> {
     private int[][] a;
     private int[][] b;
-    private int[][] result;
 
     private int N;
-
-    ForkJoinPool pool = new ForkJoinPool();
 
 
     public Strassen(int[][] a, int[][] b, int n) {
